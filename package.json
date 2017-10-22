@@ -1,0 +1,30 @@
+{
+  "name": "burgers",
+  "version": "1.0.0",
+  "description": "Eat a Burger, Create a Burger",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BIMATN/burger.git"
+  },
+  "keywords": [
+    "burger"
+  ],
+  "author": "Benjamin Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BIMATN/burger/issues"
+  },
+  "homepage": "https://github.com/BIMATN/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0"
+  }
+}
