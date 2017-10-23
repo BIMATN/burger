@@ -1,11 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const MO = require('method-override');
-const port = 8080;
+const port = process.env.PORT || 8080;
 // Initiate express
 const app = express();
 // Import routers
-const routers = require('./controllers/burger_Controller.js');
+const routes = require('./controllers/burger_Controller.js');
 // Require handlebars package
 const exphbs = require('express-handlebars');
 
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 // Use routers
-app.use("/", routers);
+app.use("/", routes);
 // Listen...
 app.listen(port, function(){
 	console.log('Burger Server is Listening on Port: '+port);

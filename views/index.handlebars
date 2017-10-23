@@ -1,21 +1,27 @@
 <h1>Burgers!</h1>
 
-<h2>Burgers Tasted Good!</h2>
+<h2>Burgers To Be Devoured!</h2>
 
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
-      {{> cats/cat-block devoured=true}}
+        <li>
+           <p>ID: {{this.id}}</p>
+           <p>Burger: {{this.burger_name}}</p>
+        </li>
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Burgers To Be Consumed...</h2>
+<h2>Burgers Tasted Good...</h2>
 
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> cats/cat-block devoured=false}}
+        <li>
+           <p>ID: {{this.id}}</p>
+           <p>Burger: {{this.burger_name}}</p>
+        </li>
     {{/if}}
   {{/each}}
 </ul>
