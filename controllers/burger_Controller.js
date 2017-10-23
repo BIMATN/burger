@@ -11,17 +11,21 @@ router.get('/', function(req, res) {
     };
     console.log(burgerObject);
     res.render("index", burgerObject);
+    //res.end();
   });
 });
 
 router.get('/api/burgers', function(req, res){
 	console.log("Alert: Burger List Retrieved from API");
-
+  burger.all(function(data){
+    res.json(data);
+  });
+  //res.end();
 });
 
 router.post('/api/burgers', function(req, res){
 	console.log("Alert: Burger Data Posted to API");
-
+  //res.end();
 });
 
 module.exports=router;
