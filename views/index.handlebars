@@ -1,0 +1,23 @@
+<h1>Burgers!</h1>
+
+<h2>Burgers Tasted Good!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> cats/cat-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers To Be Consumed...</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> cats/cat-block devoured=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<button>I'm A BUTTON</button>

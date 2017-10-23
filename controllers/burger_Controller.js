@@ -1,5 +1,5 @@
-const burger = require('../models/burgers.js');
-const express = require('express'), router = express.router();
+const burger = require('../model/burgers.js');
+const express = require('express'), router = express.Router();
 
 router.get('/', function(req, res){
 	console.log("Alert: Homepage Accessed");
