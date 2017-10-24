@@ -1,29 +1,67 @@
-<h1>Burgers!</h1>
-
-<h2>Burgers To Be Devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-        <li>
-           <p>ID: {{this.id}}</p>
-           <p>Burger: {{this.burger_name}}</p>
-        </li>
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers Tasted Good...</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-        <li>
-           <p>ID: {{this.id}}</p>
-           <p>Burger: {{this.burger_name}}</p>
-        </li>
-    {{/if}}
-  {{/each}}
-</ul>
-
-<button>I'm A BUTTON</button>
+<br>
+<div class = "row">
+  <div class = "col-4 mx-auto">
+    <div class = "card bg-secondary">
+      <div class = "card-body">
+        <h1 class = "card-title text-center">Burger-N-Face</h1>
+        <h4 class = "card-text text-center">Eat a Burger. Make a Burger.</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class = "row">
+  <div class = "col-4 mx-auto">
+    <div class = "card bg-success">
+      <div class = "card-body">
+        <h2 class = "text-center">Burgers To Be Consumed!</h2>
+              <ol>
+                {{#each burgers}}
+                  {{#unless devoured}}
+                    <div class = "d-flex justify-content-center">
+                      <li>
+                         <p>{{this.burger_name}} <button type="button" class="btn btn-warning btn-sm" data-id = {{this.id}}>Devour!</button></p>
+                      </li>
+                    </div>
+                  {{/unless}}
+                {{/each}}
+              </ol>
+      </div>
+    </div>
+  </div>
+  <div class = "col-4 mx-auto">
+    <div class = "card bg-success">
+      <div class = "card-body">
+        <h2 class = "text-center">Burgers I've Devoured!</h2>
+              <ol class = "text-center">
+                {{#each burgers}}
+                  {{#if devoured}}
+                      <li>
+                         <p>Burger: {{this.burger_name}}</p>
+                      </li>
+                  {{/if}}
+                {{/each}}
+              </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class = "row">
+  <div class = "col-4 mx-auto">
+    <div class = "card">
+      <div class = "card-body bg-dark">
+        <h2 class = "text-center bg-danger">Need New Burger...?</h2>
+        <form>
+            <div class = "form-group">
+              <textarea class="form-control" id="burgerInput" rows="3"></textarea>
+            </div>
+        </form>
+        <div class = "d-flex justify-content-center">
+          <button type="button" id="create" class="btn btn-primary btn-lg">Make Burger!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
