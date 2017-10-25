@@ -7,13 +7,13 @@ var burger = {
       cb(res)/*This res argument hold the database data and was passed from the orm.js when it accessed the database and is now being passed to the burgers_Controller function as an argument*/;
     });
   },
-  create: function(burger, devoured, cb){
-    orm.insertOne("burgers", burger, devoured, function(res) {
+  create: function(burgerName, devoured, cb){
+    orm.insertOne("burgers", burgerName, devoured, function(res) {
       cb(res);
     });
   },
-  update: function(devoured, burger, cb) {
-    orm.update("burgers", devoured, burger, function(res) {
+  update: function(devoured, id, cb) {
+    orm.updateOne("burgers", devoured, id, function(res) {
       cb(res);
     });
   },

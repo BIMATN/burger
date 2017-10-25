@@ -20,7 +20,7 @@
                   {{#unless devoured}}
                     <div class = "d-flex justify-content-center">
                       <li>
-                         <p>{{this.burger_name}} <button type="button" class="btn btn-warning btn-sm" data-id = {{this.id}}>Devour!</button></p>
+                         <p>{{this.burger_name}} <button type="button" class="btn btn-warning btn-sm devour" data-id = {{this.id}}>Devour!</button></p>
                       </li>
                     </div>
                   {{/unless}}
@@ -54,7 +54,7 @@
         <h2 class = "text-center bg-danger">Need New Burger...?</h2>
         <form>
             <div class = "form-group">
-              <textarea class="form-control" id="burgerInput" rows="3"></textarea>
+              <textarea class="form-control" id="burgerName" rows="1"></textarea>
             </div>
         </form>
         <div class = "d-flex justify-content-center">
