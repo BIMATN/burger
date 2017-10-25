@@ -36,9 +36,11 @@
               <ol class = "text-center">
                 {{#each burgers}}
                   {{#if devoured}}
+                    <div class = "d-flex justify-content-center">
                       <li>
-                         <p>Burger: {{this.burger_name}}</p>
+                         <p>{{this.burger_name}}</p>
                       </li>
+                    </div>
                   {{/if}}
                 {{/each}}
               </ol>
